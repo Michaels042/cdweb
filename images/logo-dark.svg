@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" fill="none">
+  <!-- Architectural Landmark Icon -->
+  <g transform="translate(10, 10)">
+    <!-- Tall Center Building -->
+    <path d="M28 2L44 14V58H28V2Z" fill="#d4af37" />
+    <path d="M28 2L12 14V58H28V2Z" fill="#b88f28" />
+    <!-- Left Tower -->
+    <path d="M12 18L0 27V58H12V18Z" fill="#0b2923" />
+    <path d="M6 22.5L0 27V58H6V22.5Z" fill="#081e19" />
+    <!-- Right Tower -->
+    <path d="M44 24L56 33V58H44V24Z" fill="#0b2923" />
+    <path d="M50 28.5L56 33V58H50V28.5Z" fill="#144238" />
+    <!-- Roof highlight angles & modern cut lines -->
+    <path d="M28 2L44 14L28 26L12 14L28 2Z" fill="#e8c75e" opacity="0.8"/>
+    <!-- Ground Baseline -->
+    <rect x="-2" y="58" width="60" height="3" rx="1.5" fill="#d4af37" />
+  </g>
+  
+  <!-- Typography -->
+  <g transform="translate(80, 18)">
+    <text x="0" y="24" font-family="'Montserrat', 'Cinzel', 'Inter', sans-serif" font-size="20" font-weight="800" fill="#0b2923" letter-spacing="0.5">
+      CD’S LANDMARK
+    </text>
+    <text x="0" y="44" font-family="'Montserrat', 'Cinzel', 'Inter', sans-serif" font-size="14" font-weight="600" fill="#d4af37" letter-spacing="3.5">
+      PROPERTIES
+    </text>
+    <text x="0" y="56" font-family="'Montserrat', 'Inter', sans-serif" font-size="7.5" font-weight="600" fill="#586e66" letter-spacing="2">
+      FROM LAND TO LANDMARK
+    </text>
+  </g>
+</svg>
