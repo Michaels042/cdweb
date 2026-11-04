@@ -9,26 +9,43 @@
    -------------------------------------------------------------------------- */
 :root {
   /* Brand Palette */
-  --primary-color: #0b2923;          /* Deep Forest Green */
-  --primary-dark: #061a16;           /* Ultra Deep Forest */
-  --primary-light: #16463c;          /* Medium Forest Green */
-  --primary-surface: #103830;        /* Subtle Surface Green */
-  
-  --gold-accent: #d4af37;            /* Warm Luxury Gold */
-  --gold-hover: #e5c158;             /* Bright Gold Glow */
-  --gold-dark: #b88f28;              /* Burnished Gold */
-  --gold-subtle: rgba(212, 175, 55, 0.12); /* Soft Gold Pill Fill */
-  --gold-border: rgba(212, 175, 55, 0.35); /* Elegant Gold Border */
+  --primary-color: #0b2923;
+  /* Deep Forest Green */
+  --primary-dark: #061a16;
+  /* Ultra Deep Forest */
+  --primary-light: #16463c;
+  /* Medium Forest Green */
+  --primary-surface: #103830;
+  /* Subtle Surface Green */
+
+  --gold-accent: #d4af37;
+  /* Warm Luxury Gold */
+  --gold-hover: #e5c158;
+  /* Bright Gold Glow */
+  --gold-dark: #b88f28;
+  /* Burnished Gold */
+  --gold-subtle: rgba(212, 175, 55, 0.12);
+  /* Soft Gold Pill Fill */
+  --gold-border: rgba(212, 175, 55, 0.35);
+  /* Elegant Gold Border */
 
   /* Neutral & Canvas Tones */
-  --bg-cream: #fbf9f5;               /* Clean Off-white / Warm Cream */
-  --bg-card: #ffffff;                /* Pure White for Elevated Cards */
-  --bg-card-alt: #f4f0e7;            /* Warm Muted Neutral */
-  --text-main: #18221f;              /* Deep Charcoal */
-  --text-muted: #53645e;             /* Slate Grey for Secondary Copy */
-  --text-light: #fbf9f5;             /* Off-white for Dark Backgrounds */
-  --text-subtle: #899c94;            /* Soft Muted Sage */
-  --border-light: #e8e3d9;           /* Clean Border Line */
+  --bg-cream: #fbf9f5;
+  /* Clean Off-white / Warm Cream */
+  --bg-card: #ffffff;
+  /* Pure White for Elevated Cards */
+  --bg-card-alt: #f4f0e7;
+  /* Warm Muted Neutral */
+  --text-main: #18221f;
+  /* Deep Charcoal */
+  --text-muted: #53645e;
+  /* Slate Grey for Secondary Copy */
+  --text-light: #fbf9f5;
+  /* Off-white for Dark Backgrounds */
+  --text-subtle: #899c94;
+  /* Soft Muted Sage */
+  --border-light: #e8e3d9;
+  /* Clean Border Line */
   --border-dark: rgba(255, 255, 255, 0.12);
 
   /* Elevation Shadows */
@@ -58,7 +75,9 @@
 /* --------------------------------------------------------------------------
    2. GLOBAL RESET & BASE STYLES
    -------------------------------------------------------------------------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -81,7 +100,8 @@ body {
   position: relative;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -93,7 +113,10 @@ a {
   transition: var(--transition-fast);
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
   font: inherit;
   color: inherit;
 }
@@ -104,7 +127,8 @@ button {
   background: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -112,14 +136,17 @@ ul, ol {
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f0ebe1;
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--primary-light);
   border-radius: var(--radius-full);
   border: 2px solid #f0ebe1;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--gold-accent);
 }
@@ -127,7 +154,12 @@ ul, ol {
 /* --------------------------------------------------------------------------
    3. TYPOGRAPHY & UTILITY CLASSES
    -------------------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.25;
@@ -135,10 +167,21 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); }
-h2 { font-size: clamp(1.85rem, 3.5vw, 2.65rem); }
-h3 { font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
-h4 { font-size: 1.25rem; }
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+}
+
+h2 {
+  font-size: clamp(1.85rem, 3.5vw, 2.65rem);
+}
+
+h3 {
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+}
+
+h4 {
+  font-size: 1.25rem;
+}
 
 p {
   color: var(--text-muted);
@@ -336,7 +379,8 @@ p {
   justify-content: space-between;
 }
 
-.topbar-left, .topbar-right {
+.topbar-left,
+.topbar-right {
   display: flex;
   align-items: center;
   gap: 24px;
@@ -401,13 +445,90 @@ p {
   justify-content: space-between;
 }
 
-/* Brand Logo */
+/* Brand Logo (Stacked: Icon on Top, Text Underneath) */
 .brand-logo {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 14px;
+  text-align: center;
   text-decoration: none;
+  gap: 3px;
 }
+
+.brand-logo-img {
+  height: 40px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition-fast);
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1);
+}
+
+.brand-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.15;
+}
+
+.brand-title {
+  font-family: var(--font-heading);
+  font-size: 0.32rem;
+  font-weight: 500;
+  color: var(--gold-accent);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.brand-subtitle {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--gold-accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.footer-brand-logo,
+.footer-col-brand .brand-logo {
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.footer-brand-logo .brand-text-block,
+.footer-col-brand .brand-text-block {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-logo-img,
+.footer-col-brand .brand-logo-img {
+  height: 58px;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  .brand-logo-img {
+    height: 40px;
+  }
+
+  .brand-title {
+    font-size: 0.82rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+  }
+}
+
 
 .brand-icon {
   width: 44px;
@@ -422,9 +543,9 @@ p {
 
 .brand-title {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 800;
-  color: #ffffff;
+  /* color: #ffffff; */
   letter-spacing: 0.5px;
   line-height: 1.1;
 }
@@ -590,7 +711,7 @@ p {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: 
+  background-image:
     radial-gradient(circle at 85% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 45%),
     radial-gradient(circle at 15% 85%, rgba(22, 70, 60, 0.4) 0%, transparent 55%),
     linear-gradient(135deg, rgba(11, 41, 35, 0.94) 0%, rgba(6, 26, 22, 0.98) 100%);
@@ -676,10 +797,12 @@ p {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.hero-stat-item h3 {
+.hero-stat-item h3,
+.hero-stat-item .stat-number {
   font-size: 1.85rem;
   color: var(--gold-accent);
   margin-bottom: 4px;
+  white-space: nowrap;
 }
 
 .hero-stat-item p {
@@ -758,6 +881,54 @@ p {
 
   .hero-floating-card {
     left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-highlights {
+    gap: 14px;
+    padding-top: 24px;
+  }
+
+  .hero-stat-item h3,
+  .hero-stat-item .stat-number {
+    font-size: 1.45rem;
+  }
+
+  .hero-stat-item p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-highlights {
+    gap: 10px;
+    padding-top: 20px;
+  }
+
+  .hero-stat-item h3,
+  .hero-stat-item .stat-number {
+    font-size: 1.25rem;
+  }
+
+  .hero-stat-item p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-highlights {
+    gap: 8px;
+  }
+
+  .hero-stat-item h3,
+  .hero-stat-item .stat-number {
+    font-size: 1.15rem;
+  }
+
+  .hero-stat-item p {
+    font-size: 0.7rem;
   }
 }
 
@@ -1150,8 +1321,15 @@ p {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .workflow-card-main {
@@ -1237,6 +1415,7 @@ p {
   .workflow-steps-timeline {
     grid-template-columns: 1fr;
   }
+
   .workflow-card-main {
     padding: 28px 20px;
   }
@@ -1822,6 +2001,7 @@ textarea.form-control {
   .contact-layout {
     grid-template-columns: 1fr;
   }
+
   .contact-info-panel {
     position: static;
   }
@@ -1831,6 +2011,7 @@ textarea.form-control {
   .form-grid {
     grid-template-columns: 1fr;
   }
+
   .contact-form-panel {
     padding: 32px 20px;
   }
@@ -2076,6 +2257,7 @@ textarea.form-control {
   .footer-grid {
     grid-template-columns: 1fr;
   }
+
   .footer-bottom .container {
     flex-direction: column;
     text-align: center;
